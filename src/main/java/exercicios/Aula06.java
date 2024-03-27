@@ -75,7 +75,7 @@ public class Aula06 extends Aula {
         
         return estudantes.stream()
         .filter(mulheresAprovadas)
-        .collect(Collectors.toUnmodifiableList());
+        .toList();
     
     }
 
@@ -91,7 +91,7 @@ public class Aula06 extends Aula {
         .filter(mulheresAprovadas)
         .sorted((x, y) -> Double.compare(x.getNota(), y.getNota()))
         .sorted((x, y) -> x.getCurso().compareTo(y.getCurso()))
-        .collect(Collectors.toUnmodifiableList());
+        .toList();
 
     }
 
@@ -107,7 +107,7 @@ public class Aula06 extends Aula {
         .filter(mulheresAprovadas)
         .sorted((x, y) -> Double.compare(x.getNota(), y.getNota()))
         .sorted((x, y) -> y.getCurso().compareTo(x.getCurso()))
-        .collect(Collectors.toUnmodifiableList());
+        .toList();
 
     }
 
@@ -121,7 +121,7 @@ public class Aula06 extends Aula {
     public List<Estudante> getEstudantesMulheresAprovadasNaoOrdenadasModificavel() {
         
         return estudantes.stream()
-        .filter(mulheresAprovadas).toList();
+        .filter(mulheresAprovadas).collect(Collectors.toList());
 
     }
 
@@ -137,7 +137,7 @@ public class Aula06 extends Aula {
         .filter(mulheresAprovadas)
         .sorted((x, y) -> Double.compare(y.getNota(), x.getNota()))
         .sorted((x, y) -> y.getCurso().compareTo(x.getCurso()))
-        .collect(Collectors.toUnmodifiableList());
+        .toList();
 
     }
 
@@ -153,7 +153,7 @@ public class Aula06 extends Aula {
         .filter(mulheresAprovadas)
         .sorted((x, y) -> Double.compare(y.getNota(), x.getNota()))
         .sorted((x, y) -> x.getCurso().compareTo(y.getCurso()))
-        .collect(Collectors.toUnmodifiableList());
+        .toList();
 
     }
 }
