@@ -60,26 +60,6 @@ public class Aula04 extends Aula {
                 totalEstudantesCursoAndSexo(estudantes.stream(), curso, mulher));
     }
 
-    /*
-     * Nota ao professor:
-     * 
-     * Meu código não passa nos testes de jeito nenhum.
-     * 
-     * Testei usando os arquivos em outro projeto sem os testes e, aparentemente,
-     * está tudo OK.
-     * 
-     * Algumas coisas a notar:
-     * 
-     * 1 - Eu rodei essa geração de alunos várias vezes e nunca é atribuído o curso
-     * de matemática a uma mulher (o que já gera falhas em dois testes)
-     * 
-     * 2 - A maior nota é sempre 9,23 e de um homem (gerando falha em outros dois testes)
-     * 
-     * 3 - Sempre geram 4 alunos homens no curso de matemática (espera-se 2), o que implica em uma
-     * média diferente da esperada (gerando falha nos dois testes restantes)
-     * 
-     */
-
     protected double maiorNotaCursoAndSexo(@NonNull final Stream<Estudante> stream, @NonNull final Curso curso,
             final char sexo) {
 
